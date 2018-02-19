@@ -1,20 +1,21 @@
 <template lang='haml'>
-%div.container
-  %h3 Currency Converter
-  %div
+%div
+  %h1 Currency Converter
+  %div.container
     %div
-      %span {{ formattedCurrency1Val }}
+      %div
+        %span {{ formattedCurrency1Val }}
+      %div
+        %span {{ formattedCurrency2Val }}
     %div
-      %span {{ formattedCurrency2Val }}
-  %div
-    %div.form-group
-      %input{type: 'text', 'v-model': 'currency1Val'}
-      %select{'v-model': 'currency1', 'name': 'currency1'}
-        %option{'v-for': 'currency in currenciesList'} {{ currency }}
-    %div.field-list
-      %input{type: 'text', 'v-model': 'currency2Val'}
-      %select{'v-model': 'currency2', 'name': 'currency2'}
-        %option{'v-for': 'currency in currenciesList'} {{ currency }}
+      %div.form-group
+        %input{type: 'text', 'v-model': 'currency1Val'}
+        %select{'v-model': 'currency1', 'name': 'currency1'}
+          %option{'v-for': 'currency in currenciesList'} {{ currency }}
+      %div.field-list
+        %input{type: 'text', 'v-model': 'currency2Val'}
+        %select{'v-model': 'currency2', 'name': 'currency2'}
+          %option{'v-for': 'currency in currenciesList'} {{ currency }}
 </template>
 <script>
   import axios from 'axios';
