@@ -93,6 +93,6 @@
 .container {
     margin-top: 50px;
     box-shadow: 0 0 30px black;
-    padding:0 15px 0 15px;
+    padding: 30px;
 }
 </style>
